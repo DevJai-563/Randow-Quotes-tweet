@@ -1,0 +1,144 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body */
+body {
+    background: linear-gradient(135deg, #ff8a00, #e52e71, #ff0044, #06c1ff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Greeting Section */
+#greeting {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    z-index: 10;
+    transition: opacity 0.5s ease-out;
+}
+
+#greeting h1 {
+    font-size: 3.5rem;
+    font-family: 'Lora', serif;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#greeting p {
+    font-size: 1.4rem;
+    font-family: 'Quicksand', sans-serif;
+    color: #ddd;
+}
+
+/* Quote Container */
+#app {
+    display: none;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    max-width: 750px;
+    width: 100%;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    transition: opacity 0.5s ease-in-out;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+#app h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration-line: underline;
+}
+
+/* Classic Quote Text */
+.quo {
+    font-size: 1.6rem; /* Smaller font size for a classic look */
+    font-family: 'Georgia', serif; /* Classic serif font */
+    font-weight: 400; /* Normal weight */
+    font-style: italic;
+    margin-bottom: 5px;
+    line-height: 1.6;
+    color: #333;
+    animation: fadeIn 2s ease-out;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Author Name */
+.auth {
+    font-size: 1.1rem;
+    color: #555;
+    margin-left: 40%;
+    font-style: italic;
+    opacity: 10;
+}
+
+/* Buttons */
+.buttons button {
+    background: linear-gradient(135deg, #ff6f61, #ff00a8);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 15px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.buttons button:hover {
+    background: linear-gradient(135deg, #ff00a8, #ff6f61);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.buttons button img {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+/* Animation for fading in the quote */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Slide-in effect for the quote container */
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#app {
+    animation: slideIn 1s ease-out; /* Slide-in effect */
+}
